@@ -25,5 +25,9 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Run Java
       run: java -jar ./target/VxMessageActions-1.0-SNAPSHOT.jar
+      on:
+  workflow_dispatch:
+  schedule:
+    - cron: "8 0 * * *"
       
     
